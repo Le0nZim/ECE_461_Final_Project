@@ -1,0 +1,3 @@
+Tuning hyperparameters is an essential part of machine learning to find the best model configuration for your data. In your case, n_components in Truncated SVD is a hyperparameter that represents the number of latent factors in the model. Latent factors are unobserved (latent) features inferred from the patterns in the user-item interactions. They might represent underlying characteristics or dimensions of the data.
+
+To tune this hyperparameter, you can use a range of values for n_components and evaluate the model performance for each. The Root Mean Squared Error (RMSE) is commonly used for this purpose. You'll select the number of components that results in the lowest RMSE, balancing between model accuracy and complexity.

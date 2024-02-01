@@ -1,0 +1,14 @@
+    High Correlation:
+        CustID and ZipCode_Frequency: This suggests that customers' IDs are strongly associated with the frequency of zip codes. This could mean that certain zip codes are more common among customers, or there's a pattern linking customers to specific zip codes. If CustID is a unique identifier for each customer, this correlation might not be meaningful for predictive modeling and could be a result of how the data is structured.
+        Month and Year: High correlation between month and year is a bit unusual, as these are generally independent time components. This could indicate an issue with the data or how it was processed.
+
+    Imbalance in 'Year': If 65% of your data is from one year, this could bias any time-series or trend analysis. The model might overfit to the characteristics of that particular year. To address this, consider:
+        Collecting more balanced data across different years.
+        Using techniques like stratified sampling or synthetic data generation (like SMOTE) for machine learning models.
+
+    Skewness in 'playscount': A skewness value of around 29.66 indicates a highly skewed distribution. This can impact statistical analyses and some machine learning models. To address this:
+        Apply log transformation or other appropriate transformations to reduce skewness.
+        Consider binning the data into categories if appropriate.
+
+skewness value indicates distribution with a long right tail.
+Majority of playscount are concetrated towards the lower end, and there are few very high values that are pulling the mean to the right. CHAT-GPT suggested log transformation but we didnt prefer it as we wouldnt like to penlize the good listeners.
